@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.time-select, .sound-picker {
+  height: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+
+.time-select button, .sound-picker button {
+  color: #a14f49;
+  width: 30%;
+  height: 10%;
+  background: none;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid #4972a1;
+  transition: all 0.5s ease;
+  background: rgba(255, 255, 255, .5);
+}
+
+.sound-picker button {
+  border: none;
+  height: 120px;
+  width: 120px;
+  padding: 30px;
+  border-radius: 50%;
+}
+
+.sound-picker button:focus {
+  outline: none;
+}
+
+.sound-picker button:nth-child(1) {
+  background: #4972a1;
+}
+
+.sound-picker button:nth-child(2) {
+  background: #a14f49;
+}
+
+.sound-picker button img {
+  height: 100%;
+}
+
+.time-select button:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.sound-picker button:hover {
+  border: 1px solid white;
+  transition: all 0.5s ease;
+}
+
+.play {
+  margin: auto;
+}
+
+.player-container {
+  position: relative;
+  height: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+
+.player-container svg {
+  position: absolute;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  pointer-events: none;
+}
+
+.player-container svg circle {
+  transition: all 0.2s ease-in-out;
+}
+
+.time-display {
+  color: white;
+  position: absolute;
+  font-size: 50px;
+  bottom: 10%;
+}
+
+.back {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  z-index: -10;
+}
